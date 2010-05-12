@@ -1,0 +1,26 @@
+Prefinery PHP API
+==================
+
+The UNofficial PHP library for interacting with the Prefinery REST API. 
+
+Prefinery (http://www.prefinery.com) helps you launch a private beta in minutes.  
+Prefinery collects email addresses, generates invitation codes, and sends 
+invitations for your web beta.  Your customers never leave your site and 
+e-mail invitations are sent from your address.
+
+The Prefinery PHP API gets Prefinery integrated into your website in seconds.
+
+
+Documentation
+=============
+
+This PHP library is written by a Prefinery customer and is neither endorsed 
+nor supported by Prefinery or Compulsivo, Inc.
+
+Documentation on the REST API can be found at http://app.prefinery.com/api
+
+
+License
+=======
+
+Copyright (c) 2010, Inspirativ.  Dmitry Avseyenko.  Released under the MIT license
