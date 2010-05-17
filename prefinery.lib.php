@@ -263,16 +263,19 @@ class Prefinery {
 
         $result = false;
         if ($this->http_res == 200) {
-            $tester = $this->getResponse($xml);
-            if ($tester['invitation-code'] == $code) {
+            /**
+             * If user exist, always return HTTP request 200...
+             */
+            //$tester = $this->getResponse($xml);
+            //if ($tester['invitation-code'] == $code) {
                 $result = true;
-            }
+            //}
         }
         return $result;
     }
 
     /**
-     * Check in tester by email
+     * Checkin tester by email
      *
      * @access public
      * @param int $resource prefinery resource
@@ -296,7 +299,7 @@ class Prefinery {
     }
 
     /**
-     * Check in tester by id
+     * Checkin tester by id
      *
      * @access public
      * @param int $resource prefinery resource
@@ -305,7 +308,7 @@ class Prefinery {
      */
     public function checkinTesterById($resource, $id) {
         $url = "testers/{$id}/checkin.xml";
-        $xml = $this->sendRequest($url, $resource, array(), 'POST');
+        $xml = $this->sendRequest($url, $resource, array(), array(), 'POST');
 
         $result = false;
         if ($this->http_res == 200) {
@@ -384,7 +387,7 @@ class Prefinery {
             curl_setopt($ch, CURLOPT_CUSTOMREQUEST, $method);
         }
         if ($data != NULL) {
-            curl_setopt ($ch, CURLOPT_HTTPHEADER, array("Content-Type: text/xml"));
+            curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type: text/xml"));
             curl_setopt($ch, CURLOPT_POST, 1);
             curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
         }
