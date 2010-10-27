@@ -491,7 +491,13 @@ class Prefinery {
                 $nnode = $dom->createElement($k);
             }
             else {
-                $nnode = $dom->createElement($k, $v);
+                if (is_array($v)) {
+                    foreach ($v as $key=>$value) {
+                        $nnode = $dom->createElement($key, $value);
+                    }
+                } else {
+                    $nnode = $dom->createElement($k, $v);
+                }
             }
             $node->appendChild($nnode);
         }
