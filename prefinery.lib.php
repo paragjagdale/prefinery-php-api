@@ -365,7 +365,7 @@ class Prefinery {
 
         $ch  = curl_init();
         if ($resource != NULL) {
-            echo $url = "{$this->api_protocol}://{$this->api_host}.prefinery.com/api/v1/betas/{$resource}/{$url}?api_key={$this->api_key}{$urlstr}";
+            $url = "{$this->api_protocol}://{$this->api_host}.prefinery.com/api/v1/betas/{$resource}/{$url}?api_key={$this->api_key}{$urlstr}";
         }
         else {
             $url = "{$this->api_protocol}://{$this->api_host}.prefinery.com/api/v1/{$url}?api_key={$this->api_key}{$urlstr}";
